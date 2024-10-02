@@ -1,0 +1,6 @@
+body{
+    .grid-container{
+        display: grid;
+        column-gap: 70px;
+    }
+}
