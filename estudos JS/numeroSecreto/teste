@@ -1,0 +1,40 @@
+let listaDeNumerosSorteados = []
+let numeroAleatorio = criarNumeroAleatorio();
+let numeroMaximo = 100;
+let tentativas = 1;
+
+
+function verificarNumero (){
+    if (numeroInserido == numeroAleatorio){
+        resposta.innerHTML = `Parabéns ${nome}, você acertou o número secreto!`
+    } else {
+        if ( numeroInserido > numeroAleatorio){
+            resposta.innerHTML = `Não foi dessa vez ${nome}. O número que você escolheu <strong>${numeroInserido}</strong> é maior do que o número secreto.`
+        } else{
+            resposta.innerHTML = `Não foi dessa vez, ${nome}. O número que você escolheu <strong>${chute}</strong> é menor do que o número secreto.`
+        }
+    tentativas++;
+    limparbarrinha();
+    }
+}
+
+function criarNumeroAleatorio (){
+    const gerarNumeroAleatorio = parseInt(Math.random() * numeroMaximo + 1);
+    let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
+
+    if (quantidadeDeElementosNaLista == numeroMaximo){
+        listaDeNumerosSorteados = [];
+    }
+
+    if (listaDeNumerosSorteados.includes(gerarNumeroAleatorio)){
+        return criarNumeroAleatorio();
+    } else{
+        listaDeNumerosSorteados.push(gerarNumeroAleatorio);
+        console.log(listaDeNumerosSorteados);
+        return gerarNumeroAleatorio;
+    }
+}
+
+function limparbarrinha () {
+    numeroInserido.value = '';
+}
