@@ -11,21 +11,21 @@ function verificarNumero (){
     let chute = Number(numeroInserido.value);
 
     if (isNaN(chute)){
-        resposta.innerHTML = 'Por favor, inserir um número válido.'
+        resposta.innerHTML = 'Por favor, ensira um número válido.'
         return;
     }
 
     if (chute == numeroAleatorio){
-        resposta.innerHTML = `Parabéns, ${nome}! Você acertou o número secrecro.`
+        resposta.innerHTML = `Parabéns, ${nome}! Você acertou o número secreto.`
         document.getElementById('reiniciar').removeAttribute('disabled')
     } else{
         if (chute < numeroAleatorio){
-            resposta.innerHTML = `Não foi dessa vez <strong>${nome}</strong>. O número que você escolheu "${chute}" é <strong>menor</strong> do que o número secreto.`
+            resposta.innerHTML = `Não foi dessa vez <strong>${nome}</strong>! O número que você escolheu "${chute}" é <strong>menor</strong> do que o número secreto.`
         } else{
-            resposta.innerHTML = `Não foi dessa vez <strong>${nome}</strong>. O número que você escolheu "${chute}" é <strong>maior</strong> do que o número secreto.` 
-            tentativas++;
-            limparbarrinha();
+            resposta.innerHTML = `Não foi dessa vez <strong>${nome}</strong>! O número que você escolheu "${chute}" é <strong>maior</strong> do que o número secreto.` 
         }
+        tentativas++;
+        limparbarrinha();
     }
 }
 
@@ -34,7 +34,7 @@ function gerarNumero (){
     return numeroCriado;
 }
 
-
+console.log(numeroAleatorio);
 
 function limparbarrinha (){
     numeroInserido.value = '';
