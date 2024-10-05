@@ -34,7 +34,7 @@ function gerarNumero (){
     return numeroCriado;
 }
 
-console.log(numeroAleatorio);
+
 
 function limparbarrinha (){
     numeroInserido.value = '';
