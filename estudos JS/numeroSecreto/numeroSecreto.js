@@ -21,7 +21,6 @@ function verificarNumero (){
     } else{
         if (chute < numeroAleatorio){
             resposta.innerHTML = `Não foi dessa vez <strong>${nome}</strong>. O número que você escolheu "${chute}" é <strong>menor</strong> do que o número secreto.`
-            
         } else{
             resposta.innerHTML = `Não foi dessa vez <strong>${nome}</strong>. O número que você escolheu "${chute}" é <strong>maior</strong> do que o número secreto.` 
             tentativas++;
@@ -35,6 +34,7 @@ function gerarNumero (){
     return numeroCriado;
 }
 
+console.log(numeroAleatorio);
 
 function limparbarrinha (){
     numeroInserido.value = '';
@@ -46,5 +46,3 @@ function tentarNovamente (){
    tentativas = 1;
    document.getElementById('reiniciar').setAttribute('disabled',true);
 }
-
-console.log(gerarNumero())
