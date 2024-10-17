@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas</title>
+    <link rel="stylesheet" href="receita.css">
+</head>
+<body>
+    <div class="body">
+        <h1>Despesas Mensais</h1>
+        <p>Digite o nome da despesa: <input type="text" id="nameInput"></p>
+        <p>Digite o valor da despesa: <input type="number" id="valueInput"></p>
+        <button id="buttonInput" value="Enviar" class="buttonCss" onclick="enviarDados()"></button>
+        <p>Atualize o valor da dispesa: <input type="number" id="newValueInput"></p>
+        <button id="buttonUpdate" value="Atualizar" class="buttonUpdateCss" onclick="atualizarValor"></button>
+        <ol id="OlList"></ol>
+        <div id="result" class="resultado"></div>
+    </div>
+
+    <script src="receita.js"></script>
+</body>
+</html>
